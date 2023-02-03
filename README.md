@@ -1,4 +1,7 @@
-# [TwitterBio.com](https://www.twitterbio.com/)
+# hi
+Setup a complete homepage and deploy it on vercel using ChatGPT and Next.JS. using nutlopes template, make your own here ->  https://github.com/Nutlope/twitterbio
+
+<!-- # [TwitterBio.com](https://www.twitterbio.com/)
 
 This project generates Twitter bios for you using AI.
 
@@ -24,4 +27,4 @@ npm run dev
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio) -->
