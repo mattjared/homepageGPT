@@ -110,7 +110,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "e.g. SaaS for garden management. AI platform fighting legal fees. Automated bill pay service. Project management software. Kayak for car insurance."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
