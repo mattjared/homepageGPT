@@ -4,9 +4,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import DropDown, { VibeType } from "../components/DropDown";
+// import DropDown, { VibeType } from "../components/DropDown";
 import Footer from "../components/Footer";
-import Github from "../components/GitHub";
+// import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import ResizablePanel from "../components/ResizablePanel";
@@ -14,20 +14,25 @@ import ResizablePanel from "../components/ResizablePanel";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
+  const [market, setMarket] = useState("");
+  const [color, setColor] = useState("");
+  // const [vibe, setVibe] = useState<VibeType>("Professional");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   console.log("Streamed response: ", generatedBios);
 
-  const prompt =
-    vibe === "Funny"
-      ? `Generate 2 funny twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure there is a joke in there and it's a little ridiculous. Make sure each generated bio is at max 20 words and base it on this context: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`
-      : `Generate 2 ${vibe} twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure each generated bio is at least 14 words and at max 20 words and base them on this context: ${bio}${
-          bio.slice(-1) === "." ? "" : "."
-        }`;
+  // const prompt =
+  //   vibe === "Funny"
+  //     ? `Generate 2 funny twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure there is a joke in there and it's a little ridiculous. Make sure each generated bio is at max 20 words and base it on this context: ${bio}${
+  //         bio.slice(-1) === "." ? "" : "."
+  //       }`
+  //     : `Generate 2 ${vibe} twitter bios with no hashtags and clearly labeled "1." and "2.". Make sure each generated bio is at least 14 words and at max 20 words and base them on this context: ${bio}${
+  //         bio.slice(-1) === "." ? "" : "."
+  //       }`;
 
+  const prompt = `
+    generate website copy for a ${bio} company that targets ${market} using 1000 words separating the content in html paragraph tags
+  `
   const generateBio = async (e: any) => {
     e.preventDefault();
     setGeneratedBios("");
@@ -75,17 +80,8 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <a
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-          href="https://github.com/mattjared/homepageGPT"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github />
-          <p>Star on GitHub</p>
-        </a>
-        <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
-          Generate a Next.JS for your next project in seconds
+        <h1 className="sm:text-6xl text-6xl font-black text-slate-900">
+          Launch a homepage in seconds
         </h1>
         {/* <p className="text-slate-500 mt-5">18,167 bios generated so far.</p> */}
         <div className="max-w-xl w-full">
@@ -98,33 +94,60 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              What does your company / open source project / community / whatever do...{" "}
-              <span className="text-slate-500">
-                (or make it up)
-              </span>
+              What does your company do?{" "}
             </p>
           </div>
           <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
-            rows={4}
+            rows={2}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. SaaS for garden management. AI platform fighting legal fees. Automated bill pay service. Project management software. Kayak for car insurance."
+              "e.g. SaaS. AI platform. Serverless database. Project management software. Troll twitter."
             }
           />
-          <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+          <div className="flex mt-10 items-center space-x-3">
+            <Image
+              src="/2-black.png"
+              width={30}
+              height={30}
+              alt="2 icon"
+              className="mb-5 sm:mb-0"
+            />
+            <p className="text-left font-medium">
+              What market do you serve?{" "}
+            </p>
           </div>
-          <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
+          <textarea
+            value={market}
+            onChange={(e) => setMarket(e.target.value)}
+            rows={2}
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            placeholder={
+              "e.g. Developers, Project managers, Construction workers, millenials. Lawyers"
+            }
+          />
+          <div className="flex mt-10 items-center space-x-3">
+            <Image
+              src="/3-black.png"
+              width={30}
+              height={30}
+              alt="3 icon"
+              className="mb-5 sm:mb-0"
+            />
+            <p className="text-left font-medium">
+              What color is your branding?{" "}
+            </p>
+            <textarea
+              value={color}
+              onChange={(e) => setColor(e.target.value)}
+              rows={2}
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+              placeholder={
+                "e.g. this is broken for now but put a hex in #ff00ff"
+              }
+            />
           </div>
-          <div>
-            <h3>dropdown here</h3>
-            <p>tweak your content </p>
-          </div>
-
           {!loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
