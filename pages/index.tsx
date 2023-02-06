@@ -79,20 +79,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
+      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-6">
         <h1 className="sm:text-6xl text-6xl font-black text-slate-900">
           Launch a homepage in seconds
         </h1>
         {/* <p className="text-slate-500 mt-5">18,167 bios generated so far.</p> */}
-        <div className="max-w-xl w-full">
+        <div className="max-w-3xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
-              alt="1 icon"
-              className="mb-5 sm:mb-0"
-            />
+            <p>1</p>
             <p className="text-left font-medium">
               What does your company do?{" "}
             </p>
@@ -100,20 +94,14 @@ const Home: NextPage = () => {
           <textarea
             value={bio}
             onChange={(e) => setBio(e.target.value)}
-            rows={2}
+            rows={1}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
               "e.g. SaaS. AI platform. Serverless database. Project management software. Troll twitter."
             }
           />
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/2-black.png"
-              width={30}
-              height={30}
-              alt="2 icon"
-              className="mb-5 sm:mb-0"
-            />
+            <p>2</p>
             <p className="text-left font-medium">
               What market do you serve?{" "}
             </p>
@@ -121,33 +109,27 @@ const Home: NextPage = () => {
           <textarea
             value={market}
             onChange={(e) => setMarket(e.target.value)}
-            rows={2}
+            rows={1}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
               "e.g. Developers, Project managers, Construction workers, millenials. Lawyers"
             }
           />
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/3-black.png"
-              width={30}
-              height={30}
-              alt="3 icon"
-              className="mb-5 sm:mb-0"
-            />
+            <p>3</p>
             <p className="text-left font-medium">
               What color is your branding?{" "}
             </p>
-            <textarea
-              value={color}
-              onChange={(e) => setColor(e.target.value)}
-              rows={2}
-              className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
-              placeholder={
-                "e.g. this is broken for now but put a hex in #ff00ff"
-              }
-            />
           </div>
+          <textarea
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            rows={1}
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            placeholder={
+              "e.g. this is broken for now but put a hex in #ff00ff"
+            }
+          />
           {!loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
