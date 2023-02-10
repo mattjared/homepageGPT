@@ -1,30 +1,18 @@
-# hi
-Setup a complete homepage and deploy it on vercel using ChatGPT and Next.JS. using nutlopes template, make your own here ->  https://github.com/Nutlope/twitterbio
+cli is the cli
 
-<!-- # [TwitterBio.com](https://www.twitterbio.com/)
+site is the site
 
-This project generates Twitter bios for you using AI.
 
-[![Twitter Bio Generator](./public/screenshot.png)](https://www.twitterbio.com)
+// https://uideck.com/templates/base-tailwind/
 
-## How it works
+<!-- Act like an HR consultant at Deloitte, and generate a comprehensive introductory paragraph that is engaging and provocative to an ebook about compensation benchmarking targeting HR leaders, with a focus on the specific challenges HR leaders face in the manufacturing industry. -->
 
-This project uses the [OpenAI GPT-3 API](https://openai.com/api/) (specifically, text-davinci-003) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It constructs a prompt based on the form and user input, sends it to the GPT-3 API via a Vercel Edge function, then streams the response back to the application.
+<!-- need a vercel api token
 
-Video and blog post coming soon on how to build apps with OpenAI and Vercel Edge functions!
+vercel cli npm dep
 
-## Running Locally
+edge function that runs npm run vercel build --THEIRKEY --cloneTemplateA 
 
-After cloning the repo, go to [OpenAI](https://beta.openai.com/account/api-keys) to make an account and put your API key in a file called `.env`.
+`npx create-next-app`
 
-Then, run the application in the command line and it will be available at `http://localhost:3000`.
-
-```bash
-npm run dev
-```
-
-## One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio) -->
+`npx create-homepage-GPT` calls my API endpint that makes all this for them  -->

@@ -10,7 +10,6 @@ class MyDocument extends Document {
             name="description"
             content="Generate a custom Next.JS site in seconds."
           />
-          {/* <meta property="og:site_name" content="twitterbio.com" /> */}
           <meta
             property="og:description"
             content="Generate a custom Next.JS site in seconds."
@@ -22,14 +21,6 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Generate a custom Next.JS site in seconds."
           />
-          {/* <meta
-            property="og:image"
-            content="https://twitterbio.com/og-image.png"
-          />
-          <meta
-            name="twitter:image"
-            content="https://twitterbio.com/og-image.png"
-          /> */}
         </Head>
         <body>
           <Main />
