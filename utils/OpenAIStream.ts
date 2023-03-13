@@ -4,8 +4,16 @@ import {
   ReconnectInterval,
 } from "eventsource-parser";
 
+export type ChatGPTAgent = "user" | "system";
+
+export interface ChatGPTMessage {
+  role: ChatGPTAgent;
+  content: string;
+}
+
 export interface OpenAIStreamPayload {
   model: string;
+  messages: ChatGPTMessage[];
   prompt: string;
   temperature: number;
   top_p: number;
@@ -22,7 +30,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
 
   let counter = 0;
 
-  const res = await fetch("https://api.openai.com/v1/completions", {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ""}`,
@@ -44,7 +52,7 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
           }
           try {
             const json = JSON.parse(data);
-            const text = json.choices[0].text;
+            const text = json.choices[0].delta?.content || "";
             if (counter < 2 && (text.match(/\n/) || []).length) {
               // this is a prefix character (i.e., "\n\n"), do nothing
               return;
