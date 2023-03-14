@@ -11,5 +11,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms"), require("@headlessui/tailwindcss")],
+  safelist: [
+    "w-0", "w-1/5", "w-2/5", "w-3/5", "w-1/12", "w-10/12", "w-2/12", "w-8/12", "w-1/12", "w-5/12"
+  ]
 };
