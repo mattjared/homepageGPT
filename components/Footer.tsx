@@ -3,28 +3,13 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="text-center text-sm h-16 sm:h-20 w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3">
+      <footer className="text-sm w-full sm:pt-2 pt-4 border-t mt-5 flex sm:flex-row flex-col justify-between items-center px-3 space-y-3 sm:mb-0 mb-3">
         <div>
-          Homepage GPT powered by{" "}
-          <a
-            href="https://openai.com/blog/chatgpt"
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold hover:underline transition underline-offset-2"
-          >
-            ChatGPT{" "}
-          </a>
-          and{" "}
-          <a
-            href="https://vercel.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold hover:underline transition underline-offset-2"
-          >
-            Vercel Edge Functions.
-          </a>
+          <p>Powered by{" "} <a href="https://openai.com/blog/chatgpt" target="_blank" rel="noreferrer" className="font-bold hover:underline transition underline-offset-2">ChatGPT{" "}</a> and{" "} <a href="https://vercel.com/" target="_blank" rel="noreferrer" className="font-bold hover:underline transition underline-offset-2">Vercel Edge Functions.</a></p>
+          <p>Currently bound to tailwind 2.2.19 due to ChatGPT API Restrictions. If you have feedback, let me know.</p>
+          <p>All rights reserved &copy; {new Date().getFullYear()}</p>
         </div>
-        <div className="flex space-x-4 pb-4 sm:pb-0">
+        <div className="flex space-x-4 ml-4 pb-4 sm:pb-0">
           <Link
             href="https://twitter.com/matt_jared"
             className="group"
@@ -51,7 +36,6 @@ export default function Footer() {
           </Link>
         </div>
       </footer>
-      <p>Currently <strong>only</strong> generates css for tailwind 2.2.19 (same as this site). This is due to ChatGPT only rendering data from 2021 and before. Once a better solution comes around I'll upgrade. The plan is to offer the ability to store, render any pages people want to use in the real world.</p>
     </>
   );
 }
