@@ -1,5 +1,5 @@
 # hi
-Setup a complete homepage and deploy it on vercel using ChatGPT and Next.JS. using nutlopes template, make your own here ->  https://github.com/Nutlope/twitterbio
+Setup a complete homepage with custom content, styles and markup all generated from ChatGPT. This uses @nutlopes Twitter Bio Generator template and a bunch of other stuff on top of it..., make your own here ->  https://github.com/Nutlope/twitterbio
 
 <!-- # [TwitterBio.com](https://www.twitterbio.com/)
 

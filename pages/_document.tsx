@@ -8,18 +8,18 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Generate a custom Next.JS site in seconds."
+            content="Build a homepage in seconds using AI"
           />
           <meta
             property="og:description"
-            content="Generate a custom Next.JS site in seconds."
+            content="Build a homepage in seconds using AI"
           />
-          <meta property="og:title" content="Twitter Bio Generator" />
+          <meta property="og:title" content="HomepageGPT" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Twitter Bio Generator" />
+          <meta name="twitter:title" content="HomepageGPT" />
           <meta
             name="twitter:description"
-            content="Generate a custom Next.JS site in seconds."
+            content="Build a homepage in seconds using AI"
           />
         </Head>
         <body>

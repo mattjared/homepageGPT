@@ -5,7 +5,8 @@ export default function Footer() {
     <footer className="text-sm w-full py-4 my-10 border-t flex sm:flex-row flex-col justify-between items-center">
       <div>
         <p>Powered by{" "} <a href="https://openai.com/blog/chatgpt" target="_blank" rel="noreferrer" className="font-bold hover:underline transition underline-offset-2">ChatGPT{" "}</a> and{" "} <a href="https://vercel.com/" target="_blank" rel="noreferrer" className="font-bold hover:underline transition underline-offset-2">Vercel Edge Functions.</a></p>
-        <p>Currently bound to tailwind 2.2.19 due to ChatGPT API Restrictions. If you have feedback, let me know.</p>
+        <p>Currently bound to tailwind 2.2.19 due to ChatGPT API Restrictions.</p>
+        <p><Link href="https://twitter.com/u/matt_jared">Tweet me</Link> your feedback</p>
         <p>All rights reserved &copy; {new Date().getFullYear()}</p>
       </div>
       <div className="flex space-x-4 ml-4 pb-4 sm:pb-0">
@@ -13,6 +14,7 @@ export default function Footer() {
           href="https://twitter.com/matt_jared"
           className="group"
           aria-label="Matt Jared on Twitter"
+          target="_blank"
         >
           <svg
             aria-hidden="true"
@@ -25,6 +27,7 @@ export default function Footer() {
           href="https://github.com/mattjared/homepageGPT"
           className="group"
           aria-label="homepageGPT on GitHub"
+          target="_blank"
         >
           <svg
             aria-hidden="true"
